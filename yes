@@ -1,0 +1,10 @@
+local mouse = game.Players.LocalPlayer:GetMouse()
+db = true
+mouse.KeyDown:connect(function(key)
+key = key:lower()
+if key == " " then
+    if db == true then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState("Jumping")
+    end
+end
+end)
